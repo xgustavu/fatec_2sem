@@ -1,0 +1,25 @@
+{
+  "name": "aula02",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "ex01": "ts-node src/ex01.ts",
+    "ex02": "ts-node src/ex02.ts",
+    "ex03": "ts-node src/ex03.ts",
+    "ex04": "ts-node src/ex04.ts",
+    "ex05": "ts-node src/ex05.ts",
+    "ex06": "ts-node src/ex06.ts",
+    "ex07": "ts-node src/ex07.ts",
+    "ex08": "ts-node src/ex08.ts",
+    "ex09": "ts-node src/ex09.ts",
+    "ex10": "ts-node src/ex10.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.2"
+  }
+}
