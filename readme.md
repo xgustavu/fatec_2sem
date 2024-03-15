@@ -5,6 +5,7 @@
 <br>
 <br>
 
+<hr/> 
 Para executar projetos em TypeScript execute o comando abaixo:
 
 ```
@@ -16,12 +17,14 @@ Para executar projetos em JavaScript execute o comando abaixo:
 ```
 $ node src/nome_arquivo.ts
 ```
+<hr/> 
 
 <br>
 <br>
 <br>
 
-#### Horário de aula:
+### Horário de aula:
+<hr/> 
 
 | Horário | Segunda-Feira | Terça-Feira | Quarta-Feira | Quinta-Feira| Sexta-Feira |
 |---------|---------|-------|--------|--------|-------|
