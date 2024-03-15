@@ -1,6 +1,10 @@
 
 ### Git destinado as atividades realizadas no 2º Semestre do curso de Desenvolvimento de Software Multiplataforma
 
+<br>
+<br>
+<br>
+
 Para executar projetos em TypeScript execute o comando abaixo:
 
 ```
@@ -14,8 +18,10 @@ $ node src/nome_arquivo.ts
 ```
 
 <br>
+<br>
+<br>
 
-Horário de aula:
+#### Horário de aula:
 
 | Horário | Segunda-Feira | Terça-Feira | Quarta-Feira | Quinta-Feira| Sexta-Feira |
 |---------|---------|-------|--------|--------|-------|
