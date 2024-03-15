@@ -1,0 +1,17 @@
+p1.14
+
+Explicação do Código Errado:
+
+No código incorreto, uma variável chamada contadorGlobal é declarada e inicializada com 0. Duas funções são definidas: uma para incrementar o valor do contador, chamada incrementarGlobal(), e outra para mostrar o valor atual do contador, chamada mostrarContadorGlobal().
+
+O problema surge quando o valor do contador é modificado diretamente para 10, sem passar pela função de incremento. Assim, quando a função mostrarContadorGlobal() é chamada, ela exibe o novo valor (10) em vez do valor correto (1), que seria esperado se o contador tivesse sido incrementado corretamente.
+
+Essa abordagem pode causar resultados inesperados e dificulta a manutenção do código, especialmente em projetos maiores.
+
+Explicação do Código Correto:
+
+No código corrigido, as funções foram modificadas para receber o contador como um argumento. Em vez de depender de uma variável global, cada função opera com seu próprio valor de contador, o que torna o código mais modular e fácil de entender.
+
+A função incrementarLocal() incrementa o contador localmente, enquanto mostrarContadorLocal() exibe o valor atual. A variável local contadorLocal é inicializada com 0 e passada de função em função, mantendo a lógica encapsulada e evitando interferências de outras partes do código.
+
+Essa abordagem melhora a legibilidade e a manutenibilidade do código, ao evitar os problemas encontrados no código incorreto.
