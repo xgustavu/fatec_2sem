@@ -1,5 +1,3 @@
-// Arquivo: errado.ts
-
 let contadorGlobal: number = 0;
 
 function incrementarGlobal() {

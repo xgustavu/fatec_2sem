@@ -1,5 +1,3 @@
-// Arquivo: certo.ts
-
 function incrementarLocal(contador: number): number {
     return contador + 1;
 }
