@@ -1,11 +1,11 @@
 let variavelGlobal: number = 10;
 
-function attVarGlobal(variavelGlobal: number) {
+function attVarGlobal(variavelLocal: number) {
     for (let i = 0; i < 5; i++) {
-        variavelGlobal = i; // Atualizando a variável local
-        console.log("Dentro do loop, local:", variavelGlobal);
+        variavelLocal = i;
+        console.log("Dentro do loop, local:", variavelLocal);
     }
-    console.log("Fora do loop, local:", variavelGlobal);
+    console.log("Fora do loop, local:", variavelLocal);
 }
 
 attVarGlobal(variavelGlobal);
