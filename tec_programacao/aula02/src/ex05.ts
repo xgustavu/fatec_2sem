@@ -1,11 +1,12 @@
-class Questao{
+class Questao {
     enunciado:string;
     valor:number;
 
-    constructor(enunciado:string,valor:number){
-        this.enunciado = enunciado;
-        this.valor = valor;
+    constructor(e:string,v:number){
+        this.enunciado = e;
+        this.valor = v;
     }
+
     print():void{
         console.log(`${this.enunciado} (${this.valor} pts.)`);
     }

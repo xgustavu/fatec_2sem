@@ -4,8 +4,8 @@ class Aleatorio {
   }
 }
 
-const aleatorio1 = new Aleatorio();
+const nros = new Aleatorio();
 
-for(let x = 1; x < 6; x++){
-    console.log(aleatorio1.get());
-}
+for(let i = 0; i < 5; i++){
+    console.log(nros.get());
+};

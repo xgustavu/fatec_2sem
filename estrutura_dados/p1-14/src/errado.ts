@@ -1,13 +1,14 @@
-let contadorGlobal: number = 0;
+let globalVariable: number = 10; // Variável global
 
-function incrementarGlobal() {
-    contadorGlobal++;
+function updateGlobalVariable() {
+    for (let i = 0; i < 5; i++) {
+        let globalVariable: number = i; // Variável local com o mesmo nome
+        console.log("Dentro do loop, local:", globalVariable);
+    }
+    console.log("Fora do loop, local:", globalVariable);
 }
 
-function mostrarContadorGlobal() {
-    console.log("O contador global é:", contadorGlobal);
-}
+updateGlobalVariable();
+console.log("Fora da função, global:", globalVariable);
 
-incrementarGlobal(); // Incrementa contadorGlobal para 1
-contadorGlobal = 10; // Modifica contadorGlobal para 10
-mostrarContadorGlobal(); // Esperado: 1, mas o resultado será 10
+export default globalVariable;

@@ -1,11 +1,14 @@
-function incrementarLocal(contador: number): number {
-    return contador + 1;
+let globalVariable: number = 10; // Variável global
+
+function updateGlobalVariable(localVariable: number) {
+    for (let i = 0; i < 5; i++) {
+        localVariable = i; // Atualizando a variável local
+        console.log("Dentro do loop, local:", localVariable);
+    }
+    console.log("Fora do loop, local:", localVariable);
 }
 
-function mostrarContadorLocal(contador: number) {
-    console.log("O contador local é:", contador);
-}
+updateGlobalVariable(globalVariable);
+console.log("Fora da função, global:", globalVariable);
 
-let contadorLocal: number = 0;
-contadorLocal = incrementarLocal(contadorLocal);
-mostrarContadorLocal(contadorLocal); // Sem ambiguidade, sempre mostrará o valor correto.
+export default globalVariable;

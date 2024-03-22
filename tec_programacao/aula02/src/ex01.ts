@@ -6,13 +6,15 @@ class Filme {
     this.duracao = duracao;
     }
     print(): void {
-        console.log(`O filme ${this.titulo} possui ${this.duracao} min.`);
+    console.log(`O filme ${this.titulo} possui ${this.duracao} min.`);
     }
     }
 
-    const filme1 = new Filme("De volta para o futuro",116);
+    const x = new Filme("De volta para o futuro",116);
+    const y = new Filme("Matrix",136);
 
-    const filme2 = new Filme("Matrix",136);
+    x.print();
+    y.print();
 
-    filme1.print();
-    filme2.print();
+
+    export default Filme;

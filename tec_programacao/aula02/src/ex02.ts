@@ -13,7 +13,7 @@ class Retangulo {
   }
 }
 
-const retangulo1 = new Retangulo(10,8);
+const retangulo = new Retangulo(2,3);
 
-console.log("Area:",retangulo1.area());
-console.log("Perimetro:",retangulo1.perimetro());
+console.log("Área:" + retangulo.area());
+console.log("Perímetro:" + retangulo.perimetro());
