@@ -1,14 +1,25 @@
-let globalVariable: number = 10; // Variável global
+let variavelGlobal: number = 10;
 
-function updateGlobalVariable() {
+function attVarGlobal() {
     for (let i = 0; i < 5; i++) {
-        let globalVariable: number = i; // Variável local com o mesmo nome
-        console.log("Dentro do loop, local:", globalVariable);
+        let variavelGlobal: number = i;
+        console.log("Dentro do loop, local:", variavelGlobal);
     }
-    console.log("Fora do loop, local:", globalVariable);
+    console.log("Fora do loop, local:", variavelGlobal);
 }
 
-updateGlobalVariable();
-console.log("Fora da função, global:", globalVariable);
+attVarGlobal();
+console.log("Fora da função, global:", variavelGlobal);
 
-export default globalVariable;
+export default variavelGlobal;
+/*
+Saída esperada:
+
+Dentro do loop, local: 0
+Dentro do loop, local: 1
+Dentro do loop, local: 2
+Dentro do loop, local: 3
+Dentro do loop, local: 4
+Fora do loop, local: 4
+Fora da função, global: 10
+*/
