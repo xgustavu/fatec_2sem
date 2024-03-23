@@ -1,45 +1,59 @@
-create table cliente(
-	nome_cliente text not null primary key,
-	cidade_cliente text,
-	endereco_cliente text
-);
+-- Criar banco de dados bd_sistema_bancario
 
-create table conta(
-	numero_conta int not null primary key,
-	nome_agencia text,
-	saldo float
-);
+drop database if exists bd_sistema_bancario;
+create database bd_sistema_bancario;
+
+
+-- Criar 5 tabelas quaisquer
+
+create table carro (cod integer);
+create table bicicleta (cod integer);
+create table moto (cod integer);
+create table lancha (cod integer);
+create table submarino (cod integer);
+
+
+-- Criar tabelas conforme MER (Sistema Bancario):
+
+create table cliente (
+	nome_cliente text, 
+	cidade_cliente text, 
+	endereco_cliente text);
 
 create table emprestimo(
-	numero_emprestimo int not null primary key,
-	numero_agencia int,
-	valor float
-);
+	numero_emprestimo integer, 
+	nome_agencia text, 
+	valor float);
+
+create table conta(
+	numero_conta integer, 
+	nome_agencia text, 
+	saldo float);
 
 create table agencia(
-	nome_agencia text not null primary key,
-	cidade_agencia text,
-	depositos float
-);
+	nome_agencia text, 
+	cidade_agencia text, 
+	depositos float);
 
-create table investimentos(
-	nome_investimentos text not null primary key,
-	valor float,
-	data_investimento date
-);
+-- Deletar as 5 tabelas criadas aleatoriamente
 
-alter table cliente add column idade int;
-alter table clinte rename column idade to idades;
-alter table cliente drop column idades;
+drop table carro;
+drop table bicicleta;
+drop table moto;
+drop table lancha;
+drop table submarino;
 
-select * from cliente;
+-- alterar as tabelas conforme o MER atualizado
 
 alter table cliente rename to tbl_cliente;
-alter table conta rename to tbl_conta;
 alter table emprestimo rename to tbl_emprestimo;
+alter table conta rename to tbl_conta;
 alter table agencia rename to tbl_agencia;
-alter table investimentos rename to tbl_investimento;
+
+alter table tbl_cliente add column idade integer;
+alter table tbl_cliente add column cpf integer;
+alter table tbl_agencia rename column cidade_agencia to endereco_agencia;
+
+-- Criar um esquema com o seu nome
 
 create schema gustavo;
-
-drop table tbl_conta, tbl_agencia, tbl_cliente, tbl_emprestimo, tbl_investimento;	
