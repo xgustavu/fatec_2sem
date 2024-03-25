@@ -23,3 +23,5 @@ const op = new Operacao(3,5);
 console.log("Soma:", op.somar());
 console.log("Diferença:", op.subtrair());
 console.log("Divisão:", op.dividir());
+
+export default Operacao;
