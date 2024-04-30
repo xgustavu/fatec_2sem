@@ -8,7 +8,7 @@ Falta implementar o componente para compor cores usando CMYK. Será necessário 
 ### Instruções de uso
 Todos os pacotes necessários já estão no `package.json`.
 ```
-git clone https://github.com/arleysouza/react-context-styled.git front
+git clone https://github.com/xgustavu/fatec_2sem/tree/main/dev_web2/atv02/react-context-styled.git front
 cd front
 npm i
 npm start
