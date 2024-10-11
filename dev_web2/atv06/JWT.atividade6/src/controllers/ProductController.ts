@@ -12,25 +12,13 @@ class ProductController {
   }
 
   public async list(req: Request, res: Response): Promise<void> {
-    const termoBusca = req.params.termo;
-    if ( termo ){
-      
-    }
-
+    const termoBusca: string = req.params.termo ? req.params.termo + "%" : "%%";
     const r: any = await query(
-      "SELECT a.id,a.name,b.name AS category FROM products AS a LEFT JOIN categories AS b ON a.idcategory=b.id ORDER BY a.name"
+      `SELECT a.id,a.name,b.name AS category FROM products AS a LEFT JOIN 
+        categories AS b ON a.idcategory = b.id WHERE a.name ILIKE $1 ORDER BY a.name LIMIT 5`,
+      [termoBusca]
     );
     res.json(r);
-    
-    try {
-      const resultBusca: any = await query(
-        `SELECT * FROM tabela WHERE campo LIKE '%${termoBusca}%'`
-      );
-      res.json(resultBusca);
-    } catch (error) {
-      console.log("erro na busca", error);
-      res.status(500).json({ error: "Erro na busca" });
-    }
   }
 
   public async delete(req: Request, res: Response): Promise<void> {

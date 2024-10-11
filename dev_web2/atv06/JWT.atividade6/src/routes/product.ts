@@ -7,7 +7,7 @@ const routes = Router();
 
 
 routes.get("/", controller.list);
-routes.get("/buscar/:termo", controller.list);
+routes.get("/:termo", controller.list);
 routes.post("/", checkAdm, controller.create);
 routes.delete("/", checkAdm, controller.delete);
 routes.put("/", checkAdm, controller.update);
